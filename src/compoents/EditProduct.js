@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import axios from "axios";
 
-class Addproduct extends React.Component {
+
+class EditProduct extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -11,6 +12,7 @@ class Addproduct extends React.Component {
             quantity: 0,
             price: 0,
             category: "",
+            deleteSuccess:props.deleteSuccess,
             productnameError: '',
             productdetailsError: '',
             productpriceError: '',
@@ -18,8 +20,36 @@ class Addproduct extends React.Component {
             productcategoryError: '',
             buttonStatus: true,
         }
+
     }
-    addProduct=()=>{
+
+    componentWillMount() {
+       
+        if (this.props.location.state !== undefined) {
+            axios.get('http://localhost:3000/productdetails/' + this.props.location.state.myid)
+                .then(response => {
+                    
+                   
+                    this.setState({
+                        id: response.data.id,
+                        name: response.data.name,
+                        productdetails: response.data.productdetails,
+                        quantity: response.data.quantity,
+                        price: response.data.price,
+                        category: response.data.category,
+
+                    })
+                }, error => {
+                    console.error(error);
+                })
+        }
+        else{
+            this.props.history.push('/')
+        }
+    }
+
+    editProduct=()=>{
+       
         let productRequestBody = {
             "name": this.state.name,
             "productdetails": this.state.productdetails,
@@ -27,15 +57,50 @@ class Addproduct extends React.Component {
             "price": this.state.price,
             "category": this.state.category
         }
-        axios.post('http://localhost:3000/productdetails/', productRequestBody)
+        axios.put('http://localhost:3000/productdetails/'+this.state.id, productRequestBody)
                 .then(response=>{
                     console.log(response);
                    
                     this.props.history.push('/')
+                   
                 }, error=>{
                     console.error(error);
                 })
     }
+
+    getName = (event) => {
+       
+        console.log(event.target.value)
+        this.setState({ name: event.target.value })
+        this.checkValidation(event)
+    }
+    getproductdetails = (event) => {
+       
+        console.log(event.target.value)
+        this.setState({ productdetails: event.target.value })
+        this.checkValidation(event)
+    }
+    getPrice = (event) => {
+       
+        console.log(event.target.value)
+        this.setState({ price: event.target.value })
+        this.checkValidation(event)
+    }
+    getquantity = (event) => {
+        
+        
+        console.log(event.target.value)
+        this.setState({ quantity: event.target.value })
+        this.checkValidation(event)
+    }
+    getcategory = (event) => {
+       
+        
+        console.log(event.target.value)
+        this.setState({ category: event.target.value })
+        this.checkValidation(event)
+    }
+
 
     checkValidation(event) {
         console.log(event)
@@ -51,7 +116,7 @@ class Addproduct extends React.Component {
             productdetailsError='Product details  Required or Product details must above 10 word '
         }
         else if (event==='productprice' && this.state.price === '') {
-            productpriceError='Product price  Required'
+            productpriceError='Product price Required'
         } 
         else if (event==='productquantity' && this.state.quantity === '') {
             productquantityError='Product quantity  Required'
@@ -114,67 +179,42 @@ class Addproduct extends React.Component {
         this.checkValidation('productcategory');
     }
 
-
-
-
-    getName = (event) => {
-        console.log(event.target.value)
-        this.setState({ name: event.target.value })
-    }
-    getproductdetails = (event) => {   
-        console.log(event.target.value)
-        this.setState({ productdetails: event.target.value })
-    }
-    getPrice = (event) => {     
-        console.log(event.target.value)
-        this.setState({ price: event.target.value })
-    }
-    getquantity = (event) => {
-      
-        console.log(event.target.value)
-        this.setState({ quantity: event.target.value })
-    }
-    getcategory = (event) => {
-    
-        console.log(event.target.value)
-        this.setState({ category: event.target.value })
-    }
     render() {
+        
         return (
-            <form className="form" >
-                <h2 >Add Product</h2>
+
+            <form className="form">
+                <h2 >Update Product</h2>
+                <br></br>
+                
+                <input type="hidden" value={this.state.id} readOnly></input>
                 <br></br>
                 <p>Product name</p>
-                <input className="input" type="text" id="productname" onChange={this.getName} onBlur={this.getblurName}></input>
+                <input className="input" type="text" id="productname" value={this.state.name} onChange={this.getName} onBlur={this.getblurName}></input>
                 <p className="error">{this.state.productnameError}</p>
-                
                 <p>Product Description</p>
-                <textarea id="productdetails" onChange={this.getproductdetails} value={this.state.productdetails} onBlur={this.getblurproductdetails}> </textarea><br></br>
+                <textarea id="productdetails" value={this.state.productdetails} onChange={this.getproductdetails} onBlur={this.getblurproductdetails}> </textarea><br></br>
                 <p className="error">{this.state.productdetailsError}</p>
-
                 <p>Price</p>
-                <input type="number" className="input" id="productprice" onChange={this.getPrice} onBlur={this.getblurPrice}></input>
+                <input type="number" className="input" id="productprice" value={this.state.price} onChange={this.getPrice} onBlur={this.getblurPrice}></input>
                 <p className="error">{this.state.productpriceError}</p>
-
                 <p>Quantity</p>
-                <input type="number" className="input" id="productquantity" onChange={this.getquantity} onBlur={this.getblurquantity}></input>
+                <input type="number" className="input" id="productquantity" value={this.state.quantity} onChange={this.getquantity} onBlur={this.getblurquantity}></input>
                 <p className="error">{this.state.productquantityError}</p>
-
                 <p>Categorey</p>
-                <select id="productquantity"  className="input" onChange={this.getcategory}  onBlur={this.getblurcategory}>
-                    <option id="productcategory">Select option</option>
+                <select id="productquantity" className="input" onChange={this.getcategory} value={this.state.category} onBlur={this.getblurcategory}>
+                    <option id="productcategory" >{this.state.category}</option>
                     <option id="productcategory">Televison</option>
                     <option id="productcategory">Mobile </option>
                     <option id="productcategory">Furniture</option>
                     <option id="productcategory">Computer Accessories</option>
                 </select><br></br>
                 <p className="error">{this.state.productcategoryError}</p>
-
-                <button type="button" className="button" onClick={this.addProduct}  disabled={this.state.buttonStatus}>Add</button>
+                <button type="button" className="button" onClick={this.editProduct} disabled={this.state.buttonStatus}>Update</button>
             </form>
 
         );
     }
 }
 
-export default Addproduct;
+export default EditProduct;

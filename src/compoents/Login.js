@@ -1,56 +1,135 @@
 import React from 'react';
 import './style.css';
-
+import axios from "axios";
 class Login extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state ={
-            username:'',
-            password:''
+        this.state = {
+            id: 0,
+            username: '',
+            password: '',
+            logindetails: [],
+            nameError: '',
+            passwordError: '',
+            buttonStatus:true,
+            loginstatus:false
         }
     }
+   
+    getName = (event) => {
+        console.log(event.target.value)
+        this.setState({ username: event.target.value })
+        this.checkValidation(event)
+    }
 
-    getName=(event)=>{
+    getPassword = (event) => {
+        console.log(event.target.value)
+        this.setState({ password: event.target.value })
+        this.checkValidation(event)
+    }
+    getblurName = (event) => {
+       
+        this.setState({ username: event.target.value })
+        this.checkValidation("username")
+    }
+    
+    getblurPasswword = (event) => {
+        
+        console.log(event.target.value)
+        this.setState({ password: event.target.value })
+        this.checkValidation('password');
+    }
+
+
+    checkValidation(event) {
         console.log(event)
-        console.log(event.target)
-        console.log(event.target.value)
-        this.setState({username: event.target.value})
+        let nameerror = ''
+        let passworderror = ''
+        if (event==='username' && this.state.username === '') {
+            console.log('set state for nameError');
+            nameerror = 'Name is Required'
+        }
+        else if (event==='password' && this.state.password === '') {
+            console.log('set state for passwordError');
+            passworderror = 'Password is Required'
+        }
+        //check for other conditions!
+        if (nameerror || passworderror) {
+           
+            this.setState({
+                nameError: nameerror,
+                passwordError: passworderror,
+                buttonStatus:true
+            })
+
+            return false
+        }
+        this.setState({
+            nameError: '',
+            passwordError: '',
+            buttonStatus:false
+        })
+        return true
 
     }
 
-    getPassword=(event)=>{
-        console.log(event)
-        console.log(event.target)
-        console.log(event.target.value)
-        this.setState({password: event.target.value})
 
+
+    login = (event) => {
+
+        axios.get('http://localhost:3000/userdetails/?q=' + this.state.username)
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    logindetails: response.data
+                })
+                this.state.logindetails.map(logindetail => {
+                    console.log(logindetail)
+                    if (logindetail.name === this.state.username && logindetail.password === this.state.password) {
+                       
+                        this.props.history.push('/')
+                        return true;
+                    }
+                    else {
+                        this.setState({
+                            username: '',
+                            password: '',
+                            loginstatus:true
+                        })
+                       
+                       return this.render();
+                    }
+                   
+                })
+            }, error => {
+                console.error(error);
+            })
+            
     }
-    login=(event)=>{
-        console.log(event.target.value)
-        this.setState({password: event.target.value})
-        this.setState({username: event.target.value})
-    }
-    render() { 
+
+
+    render() {
         return (
-            <div className="login">
+            <form className="form">
+                {this.state.loginstatus &&
+                    <div >
+                        <h5 className="loginerror">Invalid UserName/Password</h5>
+                    </div>
+                }
                 <h3>login Component</h3>
-                <form>
-                    <label className="namepass">Name </label><br></br>
-                    <input type='text' id="username" onChange={this.getName}></input>
-                    <br></br>
-                     Username Name: { this.state.username }
-                    <br></br>
-                    <br></br>
-                    <label  className="namepass">Password </label><br></br>
-                    <input type='password' id="password" onChange={this.getPassword}></input>
-                    <br></br>
-                     password: { this.state.password }
-                    <br></br>
-                <button onClick={this.login}>Login</button>
-                </form>
-  
-            </div>        );
+                <p >Name </p>
+                <input className="input" type='text' id="username" onChange={this.getName} onBlur={this.getblurName}></input>
+                <p className="error">{this.state.nameError}</p>
+                <p >Password </p>
+                <input className="input" type='password' id="password" onChange={this.getPassword} onBlur={this.getblurPasswword}></input>
+                <br></br>
+                <p  className="error">{this.state.passwordError}</p>
+                <br></br>
+                <button type="button" className="button" onClick={this.login} disabled={this.state.buttonStatus}>Login</button>
+            </form>
+
+        );
     }
 }
- 
+
 export default Login;
