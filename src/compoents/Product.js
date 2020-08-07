@@ -19,6 +19,7 @@ class Product extends React.Component {
     render() {
         return (
             <div className="individual">
+                <img src={this.props.image} className="image" alt="imagenotfound"></img>
                 <h2>{this.props.name}</h2>
                 <p>{this.props.id}</p>
                 <p>Category :{this.props.category} </p>

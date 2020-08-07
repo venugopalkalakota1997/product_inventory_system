@@ -75,6 +75,7 @@ class Home extends React.Component {
                     quantity={product.quantity}
                     price={product.price}
                     category={product.category}
+                    image={product.image}
                     deleteId={this.deleteProductWithId}
                     editId={this.editProductWithId}
                 >
@@ -91,7 +92,7 @@ class Home extends React.Component {
         if (event.target.value !== '') {
             let filteredvalues=this.state.permenantproducts.filter((fproduct)=>{
 
-                return fproduct.name.includes(event.target.value)
+                return fproduct.name.toLowerCase().includes(event.target.value.toLowerCase())
                })
                this.setState({
                    products:filteredvalues

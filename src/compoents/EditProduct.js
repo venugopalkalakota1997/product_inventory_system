@@ -12,12 +12,14 @@ class EditProduct extends React.Component {
             quantity: 0,
             price: 0,
             category: "",
+            image:'',
             deleteSuccess:props.deleteSuccess,
             productnameError: '',
             productdetailsError: '',
             productpriceError: '',
             productquantityError: '',
             productcategoryError: '',
+            productimageError:'',
             buttonStatus: true,
         }
 
@@ -37,7 +39,7 @@ class EditProduct extends React.Component {
                         quantity: response.data.quantity,
                         price: response.data.price,
                         category: response.data.category,
-
+                        image:response.data.image
                     })
                 }, error => {
                     console.error(error);
@@ -55,7 +57,8 @@ class EditProduct extends React.Component {
             "productdetails": this.state.productdetails,
             "quantity": this.state.quantity,
             "price": this.state.price,
-            "category": this.state.category
+            "category": this.state.category,
+            "image":this.state.image
         }
         axios.put('http://localhost:3000/productdetails/'+this.state.id, productRequestBody)
                 .then(response=>{
@@ -100,7 +103,11 @@ class EditProduct extends React.Component {
         this.setState({ category: event.target.value })
         this.checkValidation(event)
     }
-
+    getImage=(event)=>{
+        
+        this.setState({image: event.target.value.substr(12)})
+        this.checkValidation(event)
+    }
 
     checkValidation(event) {
         console.log(event)
@@ -109,6 +116,7 @@ class EditProduct extends React.Component {
           let  productpriceError= ''
           let  productquantityError= ''
           let  productcategoryError= ''
+          let productimageError=''
         if (event==='productname' && this.state.name === '') {
             productnameError = 'Product Name  Required'
         }
@@ -124,8 +132,11 @@ class EditProduct extends React.Component {
         else if (event==='productcategory' && (this.state.category === '' ||  this.state.category === 'Select option')) {
             productcategoryError='Product category  Required'
         }
+        else if (event==='productimage' && (this.state.image === '' )) {
+            productimageError='Product image  Required'
+        }
         //check for other conditions!
-        if (productnameError|| productdetailsError||  productpriceError|| productquantityError ||  productcategoryError) {
+        if (productnameError|| productdetailsError||  productpriceError|| productquantityError ||  productcategoryError || productimageError) {
            
             this.setState({
                 productnameError: productnameError,
@@ -133,6 +144,7 @@ class EditProduct extends React.Component {
                 productpriceError:productpriceError,
                 productquantityError:productquantityError,
                 productcategoryError:productcategoryError,
+                productimageError:productimageError,
                 buttonStatus:true
             })
 
@@ -144,6 +156,7 @@ class EditProduct extends React.Component {
             productpriceError: '',
             productquantityError: '',
             productcategoryError: '',
+            productimageError:'',
             buttonStatus:false
         })
         return true
@@ -178,6 +191,11 @@ class EditProduct extends React.Component {
         this.setState({ category: event.target.value })
         this.checkValidation('productcategory');
     }
+    getblurimage =(event)=>{
+        console.log(event.target.value)
+        this.setState({image: event.target.value.substr(12)})
+        this.checkValidation('productimage');
+    }
 
     render() {
         
@@ -210,6 +228,9 @@ class EditProduct extends React.Component {
                     <option id="productcategory">Computer Accessories</option>
                 </select><br></br>
                 <p className="error">{this.state.productcategoryError}</p>
+                <p>Select Image</p>
+                {/* <input type="file" onChange={this.getImage} onBlur={this.getblurimage}  multiple accept='image/*' ></input><br></br> */}
+                <p className="error">{this.state.productimageError}</p>  
                 <button type="button" className="button" onClick={this.editProduct} disabled={this.state.buttonStatus}>Update</button>
             </form>
 
