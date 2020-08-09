@@ -15,6 +15,9 @@ class Login extends React.Component {
             loginstatus:false
         }
     }
+    componentWillMount(){
+        localStorage.removeItem("username",this.state.username)
+    }
    
     getName = (event) => {
         console.log(event.target.value)
@@ -72,10 +75,14 @@ class Login extends React.Component {
         return true
 
     }
+    setlocalstorage(){
+        localStorage.setItem("username",this.state.username)
+    }
 
 
 
     login = (event) => {
+        
 
         axios.get('http://localhost:3000/userdetails/?q=' + this.state.username)
             .then(response => {
@@ -85,10 +92,12 @@ class Login extends React.Component {
                 })
                 this.state.logindetails.map(logindetail => {
                     console.log(logindetail)
+                   
                     if (logindetail.name === this.state.username && logindetail.password === this.state.password) {
                         localStorage.setItem("username",this.state.username)
                         this.props.history.push('/')
-                        return true;
+                       
+                        
                     }
                     else {
                         this.setState({
@@ -97,9 +106,9 @@ class Login extends React.Component {
                             loginstatus:true
                         })
                        
-                       return this.render();
+                      
                     }
-                   
+                   return null;
                 })
             }, error => {
                 console.error(error);

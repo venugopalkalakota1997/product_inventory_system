@@ -20,7 +20,6 @@ class Navbar extends React.Component {
 
 
    logout=(e)=>{
-       e.preventDefault();
      localStorage.removeItem("username")
      this.props.history.push('/')
    }
@@ -43,7 +42,7 @@ class Navbar extends React.Component {
                     {username !== null &&
                         <div className="custom-nav">
                             <Link to="/">Product_Inventory</Link>
-                            <Link className="buttonnav" onClick={this.logout.bind(this)}> logout</Link>&nbsp;&nbsp;
+                            <button type="button" className="buttonnav1" onClick={this.logout}> logout</button>&nbsp;&nbsp;
                            <Link className="buttonnav" disabled={true}>{username} </Link>&nbsp;
                     </div>
                     }
@@ -52,7 +51,7 @@ class Navbar extends React.Component {
 
                 <div>
                     <Switch>
-                        <Route exact path='/' component={Home}></Route>
+                        <Route exact path='/'  component={Home}></Route>
                         <Route path='/login' component={Login}></Route>
                         <Route path='/register' component={Signup}></Route>
                         <Route path='/add' component={Addproduct}></Route>

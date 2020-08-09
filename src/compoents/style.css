@@ -47,9 +47,20 @@
  color: white;
  padding: 5px 32px;
  text-align: center;
- font-size: 16px;  
+ font-size: 16px; 
+ 
 }
-
+.buttonnav1{
+  float: right;
+  background-color: grey;
+  border: none;
+  cursor:pointer;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  font-size: 16px; 
+  height: 50px;
+ }
 a{
  float: right;
  text-decoration: none;
@@ -217,10 +228,12 @@ a{
   }
   
   @media screen and ( max-width:425px){
-    .custom-nav a, .custom-nav a:first-child{
+    .custom-nav a, .custom-nav a:first-child,.buttonnav1{
         float: none;
         display: block;
         position: relative;
+        width: 100%;
+        text-align: center;
        
     }
     .home{
