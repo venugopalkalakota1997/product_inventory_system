@@ -30,7 +30,7 @@ class EditProduct extends React.Component {
         if (this.props.location.state !== undefined) {
             axios.get('http://localhost:3000/productdetails/' + this.props.location.state.myid)
                 .then(response => {
-                    
+                    console.log(response);
                    
                     this.setState({
                         id: response.data.id,
@@ -229,9 +229,11 @@ class EditProduct extends React.Component {
                 </select><br></br>
                 <p className="error">{this.state.productcategoryError}</p>
                 <p>Select Image</p>
-                {/* <input type="file" onChange={this.getImage} onBlur={this.getblurimage}  multiple accept='image/*' ></input><br></br> */}
+                <input type="file" onChange={this.getImage} onBlur={this.getblurimage}  multiple accept='image/*' ></input>
+                {this.state.image}
+                <br></br>
                 <p className="error">{this.state.productimageError}</p>  
-                <button type="button" className="button" onClick={this.editProduct} disabled={this.state.buttonStatus}>Update</button>
+                <button type="submit" className="button" onClick={this.editProduct} disabled={this.state.buttonStatus}>Update</button>
             </form>
 
         );

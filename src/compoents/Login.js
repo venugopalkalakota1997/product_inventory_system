@@ -86,7 +86,7 @@ class Login extends React.Component {
                 this.state.logindetails.map(logindetail => {
                     console.log(logindetail)
                     if (logindetail.name === this.state.username && logindetail.password === this.state.password) {
-                       
+                        localStorage.setItem("username",this.state.username)
                         this.props.history.push('/')
                         return true;
                     }
@@ -125,7 +125,7 @@ class Login extends React.Component {
                 <br></br>
                 <p  className="error">{this.state.passwordError}</p>
                 <br></br>
-                <button type="button" className="button" onClick={this.login} disabled={this.state.buttonStatus}>Login</button>
+                <button type="submit" className="button" onClick={this.login} disabled={this.state.buttonStatus}>Login</button>
             </form>
 
         );

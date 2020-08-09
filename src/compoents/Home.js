@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './style.css';
 
+
 class Home extends React.Component {
     constructor(props) {
         super(props)
@@ -14,10 +15,13 @@ class Home extends React.Component {
             deleteSuccess: false,
             updateSuccess: false,
             search: ''
+            
+           
         }
     }
 
     componentWillMount() {
+      
         this.getAllProducts()
     }
     getAllProducts = () => {
@@ -105,6 +109,7 @@ class Home extends React.Component {
 
 
     render() {
+       let username=localStorage.getItem("username")
         return (
             <div className="home">
                 <input type="text" className="searchtext" placeholder="Search.." name="search" onChange={this.getsearch}></input>
@@ -112,8 +117,13 @@ class Home extends React.Component {
                 <br></br>
                 <br></br>
                 <span>
-                    <button className="buttonadd"><Link to='/add'>Addproduct&nbsp;&nbsp;</Link></button>
-                </span><br></br><br></br>
+                {username !== null &&
+                <div className="addproduct">
+                    
+                    <button className="buttonadd" ><Link to='/add'>Addproduct&nbsp;&nbsp;</Link></button>
+                    <button className="buttonadd"><Link to='/dashboard'>Dashboard</Link></button>
+                </div>
+                }</span><br></br><br></br>
                 {this.state.deleteSuccess &&
                     <div className="alert">
                         <h5>Product deleted successfully</h5>

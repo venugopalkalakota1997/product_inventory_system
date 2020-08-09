@@ -138,7 +138,7 @@ class Signup extends React.Component {
                 console.log(response);
                 this.setState({ signSuccess: true })
                 this.intializeState()
-                this.props.history.push('/')
+                this.props.history.push('/login')
             }, error => {
                 console.error(error);
             })
@@ -168,7 +168,7 @@ class Signup extends React.Component {
                     <br></br>
                     <p className="error">{this.state.confirmPasswordError}</p>
                     <br></br>
-                    <button className="button" onClick={this.signup} disabled={this.state.buttonStatus}>Signup</button>
+                    <button type="submit" className="button" onClick={this.signup} disabled={this.state.buttonStatus}>Signup</button>
                 </form>
             </div>
         );

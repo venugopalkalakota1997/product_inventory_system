@@ -197,7 +197,7 @@ class Addproduct extends React.Component {
                 <input type="file" onChange={this.getImage} onBlur={this.getblurimage} multiple accept='image/*' ></input><br></br>
                 <p className="error">{this.state.productimageError}</p>  
                 <br></br>
-                <button type="button" className="button" onClick={this.addProduct}  disabled={this.state.buttonStatus}>Add</button>
+                <button type="submit" className="button" onClick={this.addProduct}  disabled={this.state.buttonStatus}>Add</button>
             </form>
 
         );

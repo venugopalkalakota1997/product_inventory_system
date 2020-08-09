@@ -2,30 +2,21 @@
   "productdetails": [
     {
       "name": "LG Telev",
-      "productdetails": "tv",
-      "quantity": 10,
+      "productdetails": "gfdcvbnmjkuiytfgcvbn yutrfdcvbhjyu",
+      "quantity": "0",
       "price": 27,
-      "category": "Televison",
-      "id": 10,
-      "image": "televison.jpg"
+      "category": "Furniture",
+      "image": "televison.jpg",
+      "id": 10
     },
     {
-      "name": "venu",
+      "name": "LG Televison",
       "productdetails": "tv",
-      "quantity": "10",
+      "quantity": "100",
       "price": "27",
       "category": "Televison",
-      "id": 11,
-      "image": "televison.jpg"
-    },
-    {
-      "id": 12,
-      "name": "LG Televison",
-      "price": 27,
-      "productdetails": "tv",
-      "category": "Televison",
-      "quantity": 10,
-      "image": "televison.jpg"
+      "image": "televison.jpg",
+      "id": 12
     },
     {
       "id": 13,
@@ -37,13 +28,13 @@
       "image": "televison.jpg"
     },
     {
-      "id": 14,
       "name": "LG Televison",
-      "price": 27,
-      "productdetails": "tv",
-      "category": "Televison",
+      "productdetails": "tvtttttttttttttttttttt",
       "quantity": 10,
-      "image": "televison.jpg"
+      "price": 27,
+      "category": "Televison",
+      "image": "televison.jpg",
+      "id": 14
     },
     {
       "id": 15,
@@ -78,8 +69,8 @@
       "quantity": "2",
       "price": "5",
       "category": "Televison",
-      "id": 18,
-      "image": "televison.jpg"
+      "image": "televison.jpg",
+      "id": 18
     },
     {
       "name": "venu",
@@ -87,6 +78,7 @@
       "quantity": "22",
       "price": "10",
       "category": "Mobile",
+      "image": "mobile.jpg",
       "id": 19
     },
     {
@@ -94,7 +86,7 @@
       "productdetails": "kjhjhjfghjklknbv",
       "quantity": "2",
       "price": "2",
-      "category": "C:\\fakepath\\televison.jpg",
+      "category": "Mobile",
       "image": "televison.jpg",
       "id": 20
     },
@@ -103,8 +95,8 @@
       "productdetails": "ghjklytgbjhgfvbhjg",
       "quantity": "1",
       "price": "22",
-      "category": "Mobile",
-      "image": "C:\\fakepath\\mobile.jpg",
+      "category": "Computer Accessories",
+      "image": "computer.jpg",
       "id": 21
     },
     {
@@ -113,17 +105,35 @@
       "quantity": "55",
       "price": "2",
       "category": "Televison",
-      "image": "C:\\fakepath\\televison.jpg",
+      "image": "mobile.jpg",
       "id": 22
     },
     {
       "name": "venu",
-      "productdetails": "hjjhhjhjhjhjhjhjhjhjhjhj",
+      "productdetails": "hjjhhjhjhjhjhjhjhjhjhjhjnn",
       "quantity": "12",
       "price": "12",
       "category": "Televison",
       "image": "televison.jpg",
       "id": 23
+    },
+    {
+      "name": "hp laptop",
+      "productdetails": "intel i3 processor,1gb ram",
+      "quantity": "50",
+      "price": "300000",
+      "category": "Computer Accessories",
+      "image": "computer.jpg",
+      "id": 24
+    },
+    {
+      "name": "sofa",
+      "productdetails": "eydrfkjyredfcvbhjui7trfgvbn",
+      "quantity": "6",
+      "price": "10000",
+      "category": "Furniture",
+      "image": "furniture.jpg",
+      "id": 25
     }
   ],
   "userdetails": [
@@ -174,6 +184,30 @@
       "password": "hjj",
       "contactNumber": "hjhj",
       "id": 8
+    },
+    {
+      "name": "venu",
+      "password": "pwd",
+      "contactNumber": "9703898363",
+      "id": 9
+    },
+    {
+      "name": "kk",
+      "password": "pwd",
+      "contactNumber": "7894561230",
+      "id": 10
+    },
+    {
+      "name": "kiran",
+      "password": "pw",
+      "contactNumber": "7894561230",
+      "id": 11
+    },
+    {
+      "name": "hom",
+      "password": "oo",
+      "contactNumber": "7777777777",
+      "id": 12
     }
   ]
 }
