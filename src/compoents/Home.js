@@ -164,7 +164,7 @@ class Home extends React.Component {
                 <br></br>
                 <br></br>
                 <span>
-                    <div className="addproduct">
+                    <div className="filter">
                         <p>Filter by:</p>
                         {!this.state.selectedOption &&
                             <select id="productcategory" onChange={this.getcategorysearch}>
@@ -177,7 +177,7 @@ class Home extends React.Component {
                         } &emsp;
                         {!this.state.category &&
                             <label>
-                                Avalability of stock :
+                                Product in stock :
                         <input type="checkbox" defaultChecked={this.state.selectedOption} onChange={this.onValueChange} />Yes
                          </label>
                         }

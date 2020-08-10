@@ -226,8 +226,10 @@ a{
     border: 2px solid red;
     margin-left: 10%;
   }
+
+
   
-  @media screen and ( max-width:425px){
+  @media screen and ( max-width:530px){
     .custom-nav a, .custom-nav a:first-child,.buttonnav1{
         float: none;
         display: block;
@@ -274,8 +276,13 @@ a{
     
   }
   .addproduct{
-   
+    width: 100%; 
     margin-left: 40%;
+  }
+  .filter{
+    
+    width: 100%; 
+    margin-left: 20%;
   }
   .btnmodify{
    
