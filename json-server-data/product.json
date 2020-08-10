@@ -13,7 +13,7 @@
       "name": "LG Televison",
       "productdetails": "tv",
       "quantity": "100",
-      "price": "27",
+      "price": "2",
       "category": "Televison",
       "image": "televison.jpg",
       "id": 12
@@ -57,11 +57,11 @@
     {
       "name": "nh",
       "productdetails": "hj",
-      "quantity": 0,
+      "quantity": "0",
       "price": 0,
       "category": "Mobile",
-      "id": 17,
-      "image": "mobile.jpg"
+      "image": "mobile.jpg",
+      "id": 17
     },
     {
       "name": "kiran",
@@ -129,11 +129,47 @@
     {
       "name": "sofa",
       "productdetails": "eydrfkjyredfcvbhjui7trfgvbn",
-      "quantity": "6",
+      "quantity": "0",
       "price": "10000",
       "category": "Furniture",
       "image": "furniture.jpg",
       "id": 25
+    },
+    {
+      "name": "kjjjj",
+      "productdetails": "ghjtgfvbjhfghy",
+      "quantity": "0",
+      "price": "10",
+      "category": "Televison",
+      "image": "televison.jpg",
+      "id": 26
+    },
+    {
+      "name": "jjkjk",
+      "productdetails": "jhjhjhjhkjhhjjhjh",
+      "quantity": "0",
+      "price": 0,
+      "category": "Mobile",
+      "image": "mobile.jpg",
+      "id": 27
+    },
+    {
+      "name": "lg tv",
+      "productdetails": "hgjughjuyghjkiuy",
+      "quantity": "0",
+      "price": "12",
+      "category": "Televison",
+      "image": "favicon.ico",
+      "id": 28
+    },
+    {
+      "name": "jjjj",
+      "productdetails": "hfgvhjuytfgvhbjuiy",
+      "quantity": "0",
+      "price": "2",
+      "category": "Televison",
+      "image": "televison.jpg",
+      "id": 29
     }
   ],
   "userdetails": [
@@ -208,6 +244,12 @@
       "password": "oo",
       "contactNumber": "7777777777",
       "id": 12
+    },
+    {
+      "name": "jhh",
+      "password": "pwd",
+      "contactNumber": "7894661230",
+      "id": 13
     }
   ]
 }

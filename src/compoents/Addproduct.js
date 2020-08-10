@@ -12,6 +12,7 @@ class Addproduct extends React.Component {
             price: 0,
             category: '',
             image:'',
+            fromerr:false,
             productnameError: '',
             productdetailsError: '',
             productpriceError: '',
@@ -22,6 +23,13 @@ class Addproduct extends React.Component {
         }
     }
     addProduct=()=>{
+        if(this.state.name === '' || this.state.price === '' || this.state.category === '' || this.state.quantity === '' || this.state.productdetails === '' || this.state.image === ''){
+           this.setState({
+            
+            buttonStatus:false
+            })
+        }
+        else {
         let productRequestBody = {
             "name": this.state.name,
             "productdetails": this.state.productdetails,
@@ -37,6 +45,7 @@ class Addproduct extends React.Component {
                 }, error=>{
                     console.error(error);
                 })
+            }
     }
 
     checkValidation(event) {
@@ -166,6 +175,11 @@ class Addproduct extends React.Component {
     render() {
         return (
             <form className="form" >
+                {this.state.fromerr &&
+                    <div >
+                        <p>hguytfghjuytfghjy</p>
+                    </div>
+                }
                 <h2 >Add Product</h2>
                 <br></br>
                 <p>Product name</p>

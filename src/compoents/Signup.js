@@ -128,6 +128,13 @@ class Signup extends React.Component {
     }
 
     signup = () => {
+        if(this.state.username === '' || this.state.password === '' || this.state.contactNumber === '' || this.state.confirmPassword === ''){
+            this.setState({
+             
+             buttonStatus:false
+             })
+         }
+         else {
         let userRequestBody = {
             "name": this.state.username,
             "password": this.state.password,
@@ -142,6 +149,7 @@ class Signup extends React.Component {
             }, error => {
                 console.error(error);
             })
+        }
     }
 
     render() {
