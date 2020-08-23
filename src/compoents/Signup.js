@@ -158,20 +158,20 @@ class Signup extends React.Component {
 
                 <form className="form">
                     <h2>Signup Component</h2>
-                    <p >Name </p>
+                    <p >Name <span style={{color:'red'}}> *</span></p>
                     <input className="input" type='text' id="username" onChange={this.getName} onBlur={this.getblurName}></input>
                     <p className="error">{this.state.nameError}</p>
 
-                    <p >Contact Number </p>
+                    <p >Contact Number <span style={{color:'red'}}> *</span></p>
                     <input className="input" type='text' id="contactNumber" onChange={this.getcontactNumber} onBlur={this.getblurcontactNumber}></input>
                     <p className="error">{this.state.contactNumberError}</p>
 
-                    <p>Password </p>
+                    <p>Password<span style={{color:'red'}}> *</span> </p>
                     <input className="input" type='password' id="password" onChange={this.getPassword} onBlur={this.getblurPassword}></input>
                     <p className="error">{this.state.passwordError}</p>
 
 
-                    <p>Confirm Password </p>
+                    <p>Confirm Password <span style={{color:'red'}}> *</span></p>
                     <input className="input" type='password' id="confirmPassword" onChange={this.getconfirmPassword} onBlur={this.getblurconfirmPassword}></input>
                     <br></br>
                     <p className="error">{this.state.confirmPasswordError}</p>

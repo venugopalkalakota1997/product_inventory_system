@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
-
+import Home from '../compoents/Home'
 it('renders without crash',()=>{
   render(<div></div>)
 })

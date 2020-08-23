@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
-
+import AddProduct from '../compoents/Addproduct'
 it('renders without crash',()=>{
-  render(<div></div>)
+  render(<form></form>)
 })
+
+

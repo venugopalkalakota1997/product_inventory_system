@@ -1,112 +1,49 @@
 {
   "productdetails": [
     {
-      "name": "LG ",
-      "productdetails": "gfdcvbnmjkuiytfgcvbn",
-      "quantity": "0",
-      "price": 27,
-      "category": "Furniture",
-      "image": "televison.jpg",
-      "id": 10
-    },
-    {
       "name": "LG Televison",
-      "productdetails": "tv",
-      "quantity": "100",
-      "price": "2",
+      "productdetails": "hd tv 32inch",
+      "quantity": "0",
+      "price": "20000",
       "category": "Televison",
       "image": "televison.jpg",
       "id": 12
     },
     {
-      "id": 13,
       "name": "LG Televison",
-      "price": 27,
-      "productdetails": "tv",
-      "category": "Televison",
-      "quantity": 10,
-      "image": "televison.jpg"
-    },
-    {
-      "name": "LG Televison",
-      "productdetails": "tvtttttttttttttttttttt",
-      "quantity": 10,
-      "price": 27,
+      "productdetails": "64 inch 4k ",
+      "quantity": "0",
+      "price": "640000",
       "category": "Televison",
       "image": "televison.jpg",
       "id": 14
     },
     {
-      "id": 15,
-      "name": "LG Televison",
-      "price": 27,
-      "productdetails": "tv",
-      "category": "Televison",
-      "quantity": 10,
-      "image": "televison.jpg"
-    },
-    {
       "name": "Iphone",
-      "productdetails": "hh",
-      "quantity": "1",
-      "price": "2112",
-      "category": "",
-      "id": 16,
-      "image": "televison.jpg"
+      "productdetails": "6gd ram/256gb memory",
+      "quantity": "12",
+      "price": "100000",
+      "category": "Mobile",
+      "image": "mobile.jpg",
+      "id": 16
     },
     {
-      "name": "nh",
-      "productdetails": "hj",
-      "quantity": "0",
-      "price": 0,
+      "name": "oneplus 8pro",
+      "productdetails": "8gb ram/256gb memory",
+      "quantity": "10",
+      "price": "70000",
       "category": "Mobile",
       "image": "mobile.jpg",
       "id": 17
     },
     {
-      "name": "kiran",
-      "productdetails": "gfgfgfgfgf",
-      "quantity": "2",
-      "price": "5",
-      "category": "Televison",
-      "image": "televison.jpg",
-      "id": 18
-    },
-    {
-      "name": "venu",
-      "productdetails": "hhhjjkjjkkjjkjk",
+      "name": "samsung S10",
+      "productdetails": "8gb ram/256gb memory",
       "quantity": "22",
       "price": "10",
       "category": "Mobile",
       "image": "mobile.jpg",
       "id": 19
-    },
-    {
-      "name": "venu",
-      "productdetails": "kjhjhjfghjklknbv",
-      "quantity": "2",
-      "price": "2",
-      "category": "Mobile",
-      "image": "televison.jpg",
-      "id": 20
-    },
-    {
-      "name": "iii",
-      "productdetails": "ghjklytgbjhgfvbhjg",
-      "quantity": "1",
-      "price": "22",
-      "category": "Computer Accessories",
-      "image": "computer.jpg",
-      "id": 21
-    },
-    {
-      "name": "hjhj",
-      "productdetails": "ghjgghhgghghghghghgh",
-      "quantity": "55",
-      "price": "2",
-      "category": "Televison",
-      "image": "mobile.jpg",
-      "id": 22
     },
     {
       "name": "venu",
@@ -136,40 +73,22 @@
       "id": 25
     },
     {
-      "name": "kjjjj",
-      "productdetails": "ghjtgfvbjhfghy",
-      "quantity": "0",
-      "price": "10",
-      "category": "Televison",
-      "image": "televison.jpg",
+      "name": "Optical mouse",
+      "productdetails": "opicat mouse",
+      "quantity": "01",
+      "price": "300",
+      "category": "Computer Accessories",
+      "image": "computer.jpg",
       "id": 26
     },
     {
-      "name": "jjkjk",
-      "productdetails": "jhjhjhjhkjhhjjhjh",
-      "quantity": "0",
-      "price": 0,
+      "name": "realme ",
+      "productdetails": "12gd / 256gb",
+      "quantity": "22",
+      "price": "1000",
       "category": "Mobile",
       "image": "mobile.jpg",
       "id": 27
-    },
-    {
-      "name": "lg tv",
-      "productdetails": "hgjughjuyghjkiuy",
-      "quantity": "0",
-      "price": "12",
-      "category": "Televison",
-      "image": "favicon.ico",
-      "id": 28
-    },
-    {
-      "name": "jjjj",
-      "productdetails": "hfgvhjuytfgvhbjuiy",
-      "quantity": "0",
-      "price": "2",
-      "category": "Televison",
-      "image": "televison.jpg",
-      "id": 29
     }
   ],
   "userdetails": [
@@ -250,6 +169,12 @@
       "password": "pwd",
       "contactNumber": "7894661230",
       "id": 13
+    },
+    {
+      "name": "venu",
+      "password": "pwd",
+      "contactNumber": "7894561230",
+      "id": 14
     }
   ]
 }

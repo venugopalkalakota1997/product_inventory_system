@@ -182,23 +182,23 @@ class Addproduct extends React.Component {
                 }
                 <h2 >Add Product</h2>
                 <br></br>
-                <p>Product name</p>
+                <p>Product name <span style={{color:'red'}}> *</span></p>
                 <input className="input" type="text" id="productname" onChange={this.getName} onBlur={this.getblurName}></input>
                 <p className="error">{this.state.productnameError}</p>
                 
-                <p>Product Description</p>
+                <p>Product Description <span style={{color:'red'}}> *</span></p>
                 <textarea id="productdetails" onChange={this.getproductdetails} value={this.state.productdetails} onBlur={this.getblurproductdetails}> </textarea><br></br>
                 <p className="error">{this.state.productdetailsError}</p>
 
-                <p>Price</p>
+                <p>Price <span style={{color:'red'}}> *</span></p>
                 <input type="number" className="input" id="productprice" onChange={this.getPrice} onBlur={this.getblurPrice}></input>
                 <p className="error">{this.state.productpriceError}</p>
 
-                <p>Quantity</p>
+                <p>Quantity <span style={{color:'red'}}> *</span></p>
                 <input type="number" className="input" id="productquantity" onChange={this.getquantity} onBlur={this.getblurquantity}></input>
                 <p className="error">{this.state.productquantityError}</p>
 
-                <p>Categorey</p>
+                <p>Categorey <span style={{color:'red'}}> *</span></p>
                 <select id="productquantity"  className="input" onChange={this.getcategory}  onBlur={this.getblurcategory}>
                     <option id="productcategory">Select option</option>
                     <option id="productcategory">Televison</option>
@@ -207,7 +207,7 @@ class Addproduct extends React.Component {
                     <option id="productcategory">Computer Accessories</option>
                 </select><br></br>
                 <p className="error">{this.state.productcategoryError}</p>
-                <p>Select Image</p>
+                <p>Select Image <span style={{color:'red'}}> *</span></p>
                 <input type="file" onChange={this.getImage} onBlur={this.getblurimage} multiple accept='image/*' ></input><br></br>
                 <p className="error">{this.state.productimageError}</p>  
                 <br></br>
