@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<div>
+  <form
+    className="form"
+  >
+    <h2>
+      Signup Component
+    </h2>
+    <p>
+      Name 
+      <span
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+         *
+      </span>
+    </p>
+    <input
+      className="input"
+      id="username"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="text"
+    />
+    <p
+      className="error"
+    >
+      
+    </p>
+    <p>
+      Contact Number 
+      <span
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+         *
+      </span>
+    </p>
+    <input
+      className="input"
+      id="contactNumber"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="text"
+    />
+    <p
+      className="error"
+    >
+      
+    </p>
+    <p>
+      Password
+      <span
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+         *
+      </span>
+       
+    </p>
+    <input
+      className="input"
+      id="password"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="password"
+    />
+    <p
+      className="error"
+    >
+      
+    </p>
+    <p>
+      Confirm Password 
+      <span
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+         *
+      </span>
+    </p>
+    <input
+      className="input"
+      id="confirmPassword"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="password"
+    />
+    <br />
+    <p
+      className="error"
+    >
+      
+    </p>
+    <br />
+    <button
+      className="button"
+      disabled={true}
+      onClick={[Function]}
+      type="submit"
+    >
+      Signup
+    </button>
+  </form>
+</div>
+`;

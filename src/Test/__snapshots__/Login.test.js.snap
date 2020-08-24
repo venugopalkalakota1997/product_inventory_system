@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<form
+  className="form"
+>
+  <h3>
+    login Component
+  </h3>
+  <p>
+    Name 
+  </p>
+  <input
+    className="input"
+    id="username"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+  />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <p>
+    Password 
+  </p>
+  <input
+    className="input"
+    id="password"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="password"
+  />
+  <br />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <br />
+  <button
+    className="button"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    Login
+  </button>
+</form>
+`;
