@@ -28,21 +28,21 @@ it('Submit Fucntion',()=>{
   form.simulate('submit');
   expect(onSubmitFun).toHaveBeenCalledTimes(1);
 });
-it('username field',()=>{
+it('username ',()=>{
   const wrapper=mount(<input type="text" name="username"/>);
   const input=wrapper.find('input');
   expect(input).toHaveLength(1);
   expect(input.prop('type')).toEqual('text');
   expect(input.prop('name')).toEqual('username');
 })
-it('Password field',()=>{
+it('Password ',()=>{
   const wrapper=mount(<input type="password" name="password"/>);
   const input=wrapper.find('input');
   expect(input).toHaveLength(1);
   expect(input.prop('type')).toEqual('password');
   expect(input.prop('name')).toEqual('password');
 })
-it('Button field',()=>{
+it('Button ',()=>{
   const wrapper=mount(<button type="submit">Login</button>);
   const input=wrapper.find('button');
   const result=input.text();

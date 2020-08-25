@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<div
+  className="individual"
+>
+  <img
+    alt="imagenotfound"
+    className="image"
+  />
+  <h2 />
+  <p />
+  <p>
+    Category :
+     
+  </p>
+  <p
+    className="description"
+  >
+    Description :
+     
+  </p>
+  <p>
+    <span
+      style={
+        Object {
+          "float": "left",
+          "padding": "0px 2px",
+        }
+      }
+    >
+      Price:Rs.
+        
+    </span>
+    <span
+      style={
+        Object {
+          "float": "right",
+          "padding": "0px 32px",
+        }
+      }
+    >
+      Quantity:
+    </span>
+  </p>
+  <span>
+    <br />
+    <br />
+  </span>
+</div>
+`;

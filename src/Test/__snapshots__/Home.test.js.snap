@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<div
+  className="home"
+>
+  <input
+    className="searchtext"
+    name="search"
+    onChange={[Function]}
+    placeholder="Search.."
+    type="text"
+  />
+  <button
+    className="searchbutton"
+    onClick={[Function]}
+    type="submit"
+  >
+    Search
+  </button>
+  <br />
+  <br />
+  <span>
+    <div
+      className="filter"
+    >
+      <p>
+        Filter by:
+      </p>
+      <select
+        id="productcategory"
+        onChange={[Function]}
+      >
+        <option
+          id="productcategory"
+        >
+          Select Category
+        </option>
+        <option
+          id="productcategory"
+        >
+          Televison
+        </option>
+        <option
+          id="productcategory"
+        >
+          Mobile 
+        </option>
+        <option
+          id="productcategory"
+        >
+          Furniture
+        </option>
+        <option
+          id="productcategory"
+        >
+          Computer Accessories
+        </option>
+      </select>
+        
+      <label>
+        Product in stock :
+        <input
+          defaultChecked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+        Yes
+      </label>
+    </div>
+  </span>
+  <br />
+  <br />
+</div>
+`;

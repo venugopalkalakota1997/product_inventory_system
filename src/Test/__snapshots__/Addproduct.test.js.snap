@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mathes Snapshot 1`] = `
+<form
+  className="form"
+>
+  <h2>
+    Add Product
+  </h2>
+  <br />
+  <p>
+    Product name 
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       *
+    </span>
+  </p>
+  <input
+    className="input"
+    id="productname"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+  />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <p>
+    Product Description 
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       *
+    </span>
+  </p>
+  <textarea
+    id="productdetails"
+    onBlur={[Function]}
+    onChange={[Function]}
+    value=""
+  >
+     
+  </textarea>
+  <br />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <p>
+    Price 
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       *
+    </span>
+  </p>
+  <input
+    className="input"
+    id="productprice"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="number"
+  />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <p>
+    Quantity 
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       *
+    </span>
+  </p>
+  <input
+    className="input"
+    id="productquantity"
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="number"
+  />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <p>
+    Categorey 
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       *
+    </span>
+  </p>
+  <select
+    className="input"
+    id="productquantity"
+    onBlur={[Function]}
+    onChange={[Function]}
+  >
+    <option
+      id="productcategory"
+    >
+      Select option
+    </option>
+    <option
+      id="productcategory"
+    >
+      Televison
+    </option>
+    <option
+      id="productcategory"
+    >
+      Mobile 
+    </option>
+    <option
+      id="productcategory"
+    >
+      Furniture
+    </option>
+    <option
+      id="productcategory"
+    >
+      Computer Accessories
+    </option>
+  </select>
+  <br />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <p>
+    Select Image 
+    <span
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       *
+    </span>
+  </p>
+  <input
+    accept="image/*"
+    multiple={true}
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="file"
+  />
+  <br />
+  <p
+    className="error"
+  >
+    
+  </p>
+  <br />
+  <button
+    className="button"
+    disabled={true}
+    onClick={[Function]}
+    type="submit"
+  >
+    Add
+  </button>
+</form>
+`;

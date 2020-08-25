@@ -42,6 +42,20 @@ it('Password field',()=>{
   expect(input.prop('type')).toEqual('password');
   expect(input.prop('name')).toEqual('password');
 })
+it('confrim Password field',()=>{
+  const wrapper=mount(<input type="password" name="confirmPassword"/>);
+  const input=wrapper.find('input');
+  expect(input).toHaveLength(1);
+  expect(input.prop('type')).toEqual('password');
+  expect(input.prop('name')).toEqual('confirmPassword');
+})
+it('contactNumber field',()=>{
+  const wrapper=mount(<input type="text" id="contactNumber"/>);
+  const input=wrapper.find('input');
+  expect(input).toHaveLength(1);
+  expect(input.prop('type')).toEqual('text');
+  expect(input.prop('id')).toEqual('contactNumber');
+})
 it('Button field',()=>{
   const wrapper=mount(<button type="submit">Login</button>);
   const input=wrapper.find('button');
